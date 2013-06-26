@@ -33,7 +33,7 @@ app = Flask(__name__)
 
 def form():
     """Why is this a function???"""
-    return """ <form class="form-signin" action="/commonsinterwiki/cgi-bin/main.py" method="get">
+    return """ <form class="form-signin" action="/commonsinterwiki/cgi-bin/main.py/" method="get">
 <h2 class="form-signin-heading">Please enter an id.</h2>
 <input type="text" class="input-block-level" name="id" placeholder="Q##">
 <!--<input type="text" class="input-block-level" name="site" placeholder="en">-->
