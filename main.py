@@ -24,6 +24,7 @@ IN THE SOFTWARE.
 from flask import Flask, request
 import bootstrap
 import pywikibot
+from wsgiref.handlers import CGIHandler
 
 app = Flask(__name__)
 
@@ -55,3 +56,4 @@ def main():
     text = '<textarea rows="30" cols="100">'+text+'</textarea>'
     return bootstrap.main(tool='copypaste.py', stuff=text, title='CommonsInterwiki')
 
+CGIHandler().run(app)
