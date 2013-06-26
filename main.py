@@ -41,10 +41,11 @@ def form():
 
 @app.route('/')
 def main():
-    if not 'id' in request.form:
+    qid = request.args.get('id', '')
+    if not qid:
         return bootstrap.main(tool='copypaste.py', stuff=form(), title='CommonsInterwiki')
     site = pywikibot.Site('wikidata', 'wikidata').data_repository()
-    item = pywikibot.ItemPage(site, request.form['id'])
+    item = pywikibot.ItemPage(site, qid)
     item.get('sitelinks')  # Does this even work? Oh well.
     dbnames = sorted(list(item.sitelinks))
     links = list()
