@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/data/project/commonsinterwiki/python/bin/python
 """
 Copyright (C) 2013 Legoktm
 
