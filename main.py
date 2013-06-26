@@ -1,4 +1,5 @@
 #!/data/project/commonsinterwiki/python/bin/python
+from __future__ import unicode_literals
 """
 Copyright (C) 2013 Legoktm
 
